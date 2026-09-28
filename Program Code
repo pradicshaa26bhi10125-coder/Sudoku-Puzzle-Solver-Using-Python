@@ -1,0 +1,84 @@
+def display_sudoku(sudoku):
+    for row in sudoku:
+      print(row)
+def check_sudoku(sudoku):
+     for i in range(9):
+     numbers = []
+     for j in range(9):
+         number = sudoku[i][j]
+         if number !=0:
+            if number in numbers:
+                 return False
+              numbers.append(number)
+      numbers = []
+      for j in range(9):
+           number = sudoku[j][i]
+           if number !=0:
+               if number in numbers:
+                   return False
+              numbers.append(number)
+    for row in range(0, 9, 3):
+        for column in range(0, 9, 3):
+
+            numbers =[]
+            for i in range(row, row + 3):
+                for j in  range(column, column + 3):
+                    number = sudoku[i][j]
+
+                    if number != 0:
+                        if number in numbers:
+                           return False
+numbers.append(number)
+
+  return True
+def solve_sudoku(sudoku):
+    for row in range(9):
+        for column in range(9):
+
+           if sudoku[row][column] == 0:
+
+              for number in range(1, 10):
+                  sudoku[row][column] = number 
+                  if check_sudoku(sudoku):
+                     if solve_sudoku(sudoku):
+                         return True
+
+              sudoku[row][column] = 0
+          return False
+return True
+
+print("SUDOKU CHECKER AND SOLVER")
+print("-------------------------")
+sudoku = []
+print("Enter 9 rows.")
+print("Use 0 for empty spaces.")
+for i in range(9):
+    row = []
+
+    for j in range(9):
+        number = int(input("Enter number: "))
+        row.append(number)
+
+    sudoku.append(row)
+
+print("\nGiven Sudoku:")
+display_sudoku(sudoku)
+
+if check_sudoku(sudoku):
+   print("\nSudoku is valid.")
+
+   if solve_sudoku(sudoku):
+       print("\nSolved Sudoku:")
+       display_sudoku(sudoku)
+
+else:
+    print("\nThis Sudoku cannot be  solved.")
+
+else:
+    print("\nSudoku is invalid.")
+
+        
+            
+
+          
+     
