@@ -20,7 +20,7 @@ def check_sudoku(sudoku):
     for row in range(0, 9, 3):
         for column in range(0, 9, 3):
 
-            numbers =[]
+            numbers = []
             for i in range(row, row + 3):
                 for j in  range(column, column + 3):
                     number = sudoku[i][j]
