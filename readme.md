@@ -1,7 +1,6 @@
 # 🧩 Sudoku Puzzle Solver Using Python
 
 ![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 A clean, interactive command-line application written in Python that validates and solves standard **9x9 Sudoku puzzles** using a **backtracking algorithm**.
 
@@ -81,9 +80,3 @@ python "pradicshaa 26bhi10125.py"
 
 * **Repository:** [Sudoku-Puzzle-Solver-Using-Python](https://github.com/pradicshaa26bhi10125-coder/Sudoku-Puzzle-Solver-Using-Python)
 * **GitHub Profile:** [@pradicshaa26bhi10125-coder](https://github.com/pradicshaa26bhi10125-coder)
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
